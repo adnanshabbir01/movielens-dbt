@@ -1,0 +1,203 @@
+[0m23:52:33.217277 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E2E6F4A870>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E2E70C17C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E2E7070D70>]}
+
+
+============================== 23:52:33.222153 | a959e5e1-31b5-4dd5-834b-de03823dde24 ==============================
+[0m23:52:33.222153 [info ] [MainThread]: Running with dbt=1.10.3
+[0m23:52:33.223243 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\lenovo\\.dbt', 'log_path': 'logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt init movielens', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True'}
+[0m23:52:33.253163 [debug] [MainThread]: Starter project path: C:\Users\lenovo\movielensproject\venv\Lib\site-packages\dbt\include\starter_project
+[0m23:52:33.287048 [info ] [MainThread]: 
+Your new dbt project "movielens" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m23:52:33.288002 [info ] [MainThread]: Setting up your profile.
+[0m00:01:16.283234 [info ] [MainThread]: Profile movielens written to C:\Users\lenovo\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m00:01:16.290890 [debug] [MainThread]: Command `dbt init` succeeded at 00:01:16.289816 after 523.26 seconds
+[0m00:01:16.290890 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E2E963D280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E2E93FC830>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E2E95E3650>]}
+[0m00:01:16.294720 [debug] [MainThread]: Flushing usage events
+[0m00:01:21.531127 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:30:56.661777 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022B4295D6A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022B42E05730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022B44E29550>]}
+
+
+============================== 00:30:56.661777 | fa244373-429f-42da-9bc5-9bf29ca69416 ==============================
+[0m00:30:56.661777 [info ] [MainThread]: Running with dbt=1.10.3
+[0m00:30:56.661777 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\lenovo\\.dbt', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt run', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m00:30:56.661777 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\lenovo\movielensproject\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m00:30:56.672700 [debug] [MainThread]: Command `dbt run` failed at 00:30:56.672700 after 0.38 seconds
+[0m00:30:56.672700 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022B453A02C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022B4295D6A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022B4587A6C0>]}
+[0m00:30:56.672700 [debug] [MainThread]: Flushing usage events
+[0m00:30:59.043595 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:33:07.556266 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022BE05429F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022BDD0DE1E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022BE0543860>]}
+
+
+============================== 00:33:07.556266 | 44e3792f-179a-42be-88c8-647801002534 ==============================
+[0m00:33:07.556266 [info ] [MainThread]: Running with dbt=1.10.3
+[0m00:33:07.556266 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\lenovo\\.dbt', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt run', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True'}
+[0m00:33:07.556266 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\lenovo\movielensproject\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m00:33:07.556266 [debug] [MainThread]: Command `dbt run` failed at 00:33:07.556266 after 0.27 seconds
+[0m00:33:07.556266 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022BE08F4770>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022BE02B34A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022BE0832720>]}
+[0m00:33:07.556266 [debug] [MainThread]: Flushing usage events
+[0m00:33:09.178494 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:33:48.425678 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D3157650A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D3134A6690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D313054590>]}
+
+
+============================== 00:33:48.441555 | 3af15bd4-82cd-4781-a425-a9e3675509c8 ==============================
+[0m00:33:48.441555 [info ] [MainThread]: Running with dbt=1.10.3
+[0m00:33:48.441555 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\lenovo\\.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt init movielensproject', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m00:33:48.471912 [debug] [MainThread]: Starter project path: C:\Users\lenovo\movielensproject\venv\Lib\site-packages\dbt\include\starter_project
+[0m00:33:48.493018 [info ] [MainThread]: 
+Your new dbt project "movielensproject" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m00:33:48.495519 [info ] [MainThread]: Setting up your profile.
+[0m00:41:23.807574 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B71F295B50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B71BDD5F40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B71F111B20>]}
+
+
+============================== 00:41:23.807574 | 75089d26-21c8-4605-8394-352d6bdc3396 ==============================
+[0m00:41:23.807574 [info ] [MainThread]: Running with dbt=1.10.3
+[0m00:41:23.807574 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\lenovo\\.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt run', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m00:41:23.823638 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\lenovo\movielensproject\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m00:41:23.824646 [debug] [MainThread]: Command `dbt run` failed at 00:41:23.824646 after 0.15 seconds
+[0m00:41:23.824646 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B71F295B50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B71F9302F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B71F25EE40>]}
+[0m00:41:23.824646 [debug] [MainThread]: Flushing usage events
+[0m00:41:25.048929 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:43:34.581845 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023A7A03D5B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023A7C87D910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023A7CBA3800>]}
+
+
+============================== 00:43:34.596847 | e74fc7af-3dcd-4de9-8a7a-4696a1fd7fb3 ==============================
+[0m00:43:34.596847 [info ] [MainThread]: Running with dbt=1.10.3
+[0m00:43:34.597851 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'profiles_dir': 'C:\\Users\\lenovo\\.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt run', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m00:43:34.598354 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\lenovo\movielensproject\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m00:43:34.598354 [debug] [MainThread]: Command `dbt run` failed at 00:43:34.598354 after 0.27 seconds
+[0m00:43:34.598354 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023A7C479B80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023A7D3C7530>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023A7D262E70>]}
+[0m00:43:34.598354 [debug] [MainThread]: Flushing usage events
+[0m00:43:36.177059 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m02:21:41.883253 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000198FB9B7E90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000198FE634A40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000198FE636510>]}
+
+
+============================== 02:21:41.900756 | dae19d18-a031-4e3c-91c0-b7210d648436 ==============================
+[0m02:21:41.900756 [info ] [MainThread]: Running with dbt=1.10.3
+[0m02:21:41.900756 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\lenovo\\.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m02:21:41.900756 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\lenovo\movielensproject\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m02:21:41.914782 [debug] [MainThread]: Command `dbt run` failed at 02:21:41.912076 after 0.62 seconds
+[0m02:21:41.915868 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000198FEE98770>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000198FE8F1550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000198FE8F3680>]}
+[0m02:21:41.917816 [debug] [MainThread]: Flushing usage events
+[0m02:21:43.084394 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m02:22:27.854113 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C197B798E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C19A624740>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C199B781D0>]}
+
+
+============================== 02:22:27.854113 | 6cfd0789-d74c-4da8-b65e-a03036d50e14 ==============================
+[0m02:22:27.854113 [info ] [MainThread]: Running with dbt=1.10.3
+[0m02:22:27.854113 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'profiles_dir': 'C:\\Users\\lenovo\\.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m02:22:27.862887 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\lenovo\movielensproject\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m02:22:27.862887 [debug] [MainThread]: Command `dbt run` failed at 02:22:27.862887 after 0.22 seconds
+[0m02:22:27.862887 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C19A049400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C19ABAE900>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C19A911C70>]}
+[0m02:22:27.865260 [debug] [MainThread]: Flushing usage events
+[0m02:22:28.783327 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:55:11.927962 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DE7AEDD700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DE7D480E60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DE7D4836E0>]}
+
+
+============================== 23:55:11.927962 | 214be170-ebac-47fa-8d59-c9461e76c631 ==============================
+[0m23:55:11.927962 [info ] [MainThread]: Running with dbt=1.10.3
+[0m23:55:11.927962 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\lenovo\\.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'log_format': 'default', 'invocation_command': 'dbt run -s dim_movies', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m23:55:11.927962 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\lenovo\movielensproject\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m23:55:11.927962 [debug] [MainThread]: Command `dbt run` failed at 23:55:11.927962 after 0.22 seconds
+[0m23:55:11.927962 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DE7AEDD700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DE7DAA39E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DE7DAA0DA0>]}
+[0m23:55:11.927962 [debug] [MainThread]: Flushing usage events
+[0m23:55:13.096949 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m01:06:24.335720 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000227D224F410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000227CF929970>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000227D234C290>]}
+
+
+============================== 01:06:24.335720 | 5c1da5e5-3134-47c3-b71a-b762eca80dfb ==============================
+[0m01:06:24.335720 [info ] [MainThread]: Running with dbt=1.10.3
+[0m01:06:24.335720 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': 'C:\\Users\\lenovo\\.dbt', 'log_path': 'logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt run -s mart_movie_releases', 'send_anonymous_usage_stats': 'True'}
+[0m01:06:24.335720 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\lenovo\movielensproject\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m01:06:24.335720 [debug] [MainThread]: Command `dbt run` failed at 01:06:24.335720 after 0.16 seconds
+[0m01:06:24.335720 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000227CFE4FF80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000227D27A86B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000227D2B50560>]}
+[0m01:06:24.335720 [debug] [MainThread]: Flushing usage events
+[0m01:06:25.551929 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m01:16:49.644676 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018D13252570>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018D143FDC40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018D143FEC00>]}
+
+
+============================== 01:16:49.651887 | f0c7ba42-ee08-45b7-a180-55a30a870428 ==============================
+[0m01:16:49.651887 [info ] [MainThread]: Running with dbt=1.10.3
+[0m01:16:49.651887 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\lenovo\\.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': 'logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt seed', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m01:16:49.651887 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\lenovo\movielensproject\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m01:16:49.651887 [debug] [MainThread]: Command `dbt seed` failed at 01:16:49.651887 after 0.27 seconds
+[0m01:16:49.651887 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018D13FD84A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018D14046060>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018D135EAD50>]}
+[0m01:16:49.651887 [debug] [MainThread]: Flushing usage events
+[0m01:16:51.308283 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m01:18:19.225275 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002655F1F3FB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002655FA06420>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002655BF32420>]}
+
+
+============================== 01:18:19.229735 | aa8b33ae-549f-406b-9514-70558dae3b0e ==============================
+[0m01:18:19.229735 [info ] [MainThread]: Running with dbt=1.10.3
+[0m01:18:19.229735 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'debug': 'False', 'profiles_dir': 'C:\\Users\\lenovo\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt run -s mart_movie_releases', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m01:18:19.229735 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\lenovo\movielensproject\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m01:18:19.232427 [debug] [MainThread]: Command `dbt run` failed at 01:18:19.232427 after 0.18 seconds
+[0m01:18:19.234446 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002655BDC5550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002655F1F3FB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002655F3B4D70>]}
+[0m01:18:19.234446 [debug] [MainThread]: Flushing usage events
+[0m01:18:20.819664 [debug] [MainThread]: An error was encountered while trying to flush usage events
