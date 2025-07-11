@@ -1,0 +1,111 @@
+CREATE STORAGE INTEGRATION movielens_integration
+  TYPE = EXTERNAL_STAGE
+  STORAGE_PROVIDER = 'AZURE'
+  ENABLED = TRUE
+  AZURE_TENANT_ID = ''
+  STORAGE_ALLOWED_LOCATIONS = ('azure://movielensdatastgacc.blob.core.windows.net/movielens/')
+
+DESC STORAGE INTEGRATION movielens_integration;
+
+USE SCHEMA movielens.public;
+
+CREATE FILE FORMAT my_csv_format
+  TYPE = 'CSV'
+  FIELD_DELIMITER = ','         
+  SKIP_HEADER = 1               
+  FIELD_OPTIONALLY_ENCLOSED_BY = '"'
+  NULL_IF = ('NULL', 'null');  
+
+CREATE STAGE movielens_stage
+  STORAGE_INTEGRATION = movielens_integration
+  URL = 'azure://movielensdatastgacc.blob.core.windows.net/movielens'
+  FILE_FORMAT = my_csv_format;
+
+CREATE OR REPLACE TABLE raw_movies (
+  movieId INTEGER,
+  title STRING,
+  genres STRING
+  );
+
+CREATE ROLE IF NOT EXISTS TRANSFORM;
+GRANT ROLE TRANSFORM TO ROLE ACCOUNTADMIN;
+GRANT USAGE ON STAGE MOVIELENS_STAGE TO ROLE ACCOUNTADMIN;
+
+COPY INTO raw_movies
+  FROM @movielens_stage
+  FILES = ('movies.csv');
+
+--Likewise we will create all tables and load the data
+
+CREATE OR REPLACE TABLE raw_ratings (
+  userId INTEGER,
+  movieId INTEGER,
+  rating FLOAT,
+  timestamp BIGINT
+  );
+  
+COPY INTO raw_ratings
+  FROM @movielens_stage
+  FILES = ('ratings.csv');
+
+-- Creating and loading tags table
+CREATE OR REPLACE TABLE raw_tags (
+  userId INTEGER,
+  movieId INTEGER,
+  tag STRING,
+  timestamp BIGINT
+  );
+  
+COPY INTO raw_tags
+  FROM @movielens_stage
+  FILES = ('tags.csv')
+  ON_ERROR = CONTINUE;
+
+CREATE OR REPLACE TABLE raw_genome_scores (
+  movieId INTEGER,
+  tagId INTEGER,
+  relevance FLOAT
+);
+
+COPY INTO raw_genome_scores
+  FROM @movielens_stage
+  FILES = ('genome-scores.csv');
+
+CREATE OR REPLACE TABLE raw_genome_tags (
+  tagId INTEGER,
+  tag STRING
+);
+
+COPY INTO raw_genome_tags
+  FROM @movielens_stage
+  FILES = ('genome-tags.csv');
+
+CREATE OR REPLACE TABLE raw_links (
+  movieId INTEGER,
+  imdbId INTEGER,
+  tmdbId INTEGER
+);
+
+COPY INTO raw_links
+  FROM @movielens_stage
+  FILES = ('links.csv');
+
+-- Creating the 'dbt' user and assign to the transform role
+CREATE USER IF NOT EXISTS dbt
+  PASSWORD='$Adnan12345'
+  LOGIN_NAME='dbt'
+  MUST_CHANGE_PASSWORD=FALSE
+  DEFAULT_WAREHOUSE='COMPUTE_WH'
+  DEFAULT_ROLE=TRANSFORM
+  DEFAULT_NAMESPACE='MOVIELENS.PUBLIC'
+  COMMENT='DBT user used for data transformation';
+ALTER USER dbt SET TYPE = LEGACY_SERVICE;
+GRANT ROLE TRANSFORM TO USER dbt;
+
+-- Granting permissions to the 'transform' role
+GRANT ALL ON WAREHOUSE COMPUTE_WH TO ROLE TRANSFORM;
+GRANT ALL ON DATABASE MOVIELENS TO ROLE TRANSFORM;
+GRANT ALL ON ALL SCHEMAS IN DATABASE MOVIELENS TO ROLE TRANSFORM;
+GRANT ALL ON FUTURE SCHEMAS IN DATABASE MOVIELENS TO ROLE TRANSFORM;
+GRANT ALL ON ALL TABLES IN SCHEMA MOVIELENS.PUBLIC TO ROLE TRANSFORM;
+GRANT ALL ON FUTURE TABLES IN SCHEMA MOVIELENS.PUBLIC TO ROLE TRANSFORM;
